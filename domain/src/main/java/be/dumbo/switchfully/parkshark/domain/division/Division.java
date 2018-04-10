@@ -30,6 +30,15 @@ public class Division {
         this.parentDivision = parentDivision;
     }
 
+    public Division(String name, String originalName, String director) {
+        this.name = name;
+        this.originalName = originalName;
+        this.director = director;
+    }
 
 
+    public Integer getId() {
+        return id;
+
+    }
 }
