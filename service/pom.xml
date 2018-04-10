@@ -19,7 +19,7 @@
         </dependency>
         <dependency>
             <groupId>be.dumbo.switchfully</groupId>
-            <artifactId>domain</artifactId>
+            <artifactId>repository</artifactId>
         </dependency>
     </dependencies>
 
