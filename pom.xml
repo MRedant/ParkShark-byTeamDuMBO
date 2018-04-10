@@ -54,6 +54,12 @@
                 <artifactId>repository</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-entitymanager</artifactId>
+                <version>5.2.12.Final</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
