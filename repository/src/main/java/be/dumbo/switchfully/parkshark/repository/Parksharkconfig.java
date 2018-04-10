@@ -1,5 +1,5 @@
 package be.dumbo.switchfully.parkshark.repository;
-//copied from switchfully orm exercise
+//copied code from switchfully orm exercise
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
