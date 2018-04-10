@@ -18,7 +18,7 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
         <dependency>
-            <groupId>be.dumbo.parkshark</groupId>
+            <groupId>be.dumbo.switchfully</groupId>
             <artifactId>api</artifactId>
         </dependency>
     </dependencies>
