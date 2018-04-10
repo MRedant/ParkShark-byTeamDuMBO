@@ -2,8 +2,11 @@ package be.dumbo.switchfully.parkshark.domain.division;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 @Entity
+@Table(name="DIVISION")
 public class Division {
 
     @Id
