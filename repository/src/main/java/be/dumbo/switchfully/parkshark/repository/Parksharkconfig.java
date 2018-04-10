@@ -1,4 +1,4 @@
-package codelab03.be.switchfully;
+package be.dumbo.switchfully.parkshark.repository;
 
 import codelab01.DatasourceConfig;
 import org.springframework.context.annotation.Bean;

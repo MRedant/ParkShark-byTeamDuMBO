@@ -1,6 +1,7 @@
 package be.dumbo.switchfully.parkshark.repository.division;
 
 import be.dumbo.switchfully.parkshark.domain.division.Division;
+import be.dumbo.switchfully.parkshark.repository.Parksharkconfig;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
