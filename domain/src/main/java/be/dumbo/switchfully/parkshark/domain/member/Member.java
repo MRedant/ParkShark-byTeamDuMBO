@@ -6,6 +6,7 @@ import be.dumbo.switchfully.parkshark.domain.licenseplate.LicensePlate;
 
 import java.time.LocalDate;
 
+
 public class Member {
 
     private int id;
@@ -19,6 +20,7 @@ public class Member {
     }
 
     public Member(String name, Address address, ContactInformation contactInformation, LicensePlate licensePlate, LocalDate registrationDate) {
+
         this.name = name;
         this.address = address;
         this.contactInformation = contactInformation;
