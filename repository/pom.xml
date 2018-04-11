@@ -31,6 +31,9 @@
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc6</artifactId>
             <version>11.2.0.3</version>
+            <!--https://stackoverflow.com/questions/4955635/how-to-add-local-jar-files-to-a-maven-project
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/yourJar.jar</systemPath>-->
         </dependency>
     </dependencies>
 
