@@ -5,7 +5,8 @@ import be.dumbo.switchfully.parkshark.repository.member.MemberRepository;
 
 import javax.inject.Inject;
 import javax.inject.Named;
-// from order solution
+//copied from order solution switchfully
+
 @Named
 public class MemberService {
 

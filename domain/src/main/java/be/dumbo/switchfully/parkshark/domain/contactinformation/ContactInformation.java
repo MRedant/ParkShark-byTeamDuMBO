@@ -31,4 +31,14 @@ public class ContactInformation {
     public String getEmail() {
         return email;
     }
+
+    public static class ContactInformationBuilder {
+
+        private int id;
+        private String mobilePhone;
+        private String fixedLine;
+        private String email;
+
+
+    }
 }

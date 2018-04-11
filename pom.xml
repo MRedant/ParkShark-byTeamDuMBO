@@ -25,6 +25,7 @@
         <module>service</module>
         <module>domain</module>
         <module>repository</module>
+        <module>infrastructure</module>
     </modules>
 
     <dependencyManagement>
@@ -52,6 +53,11 @@
             <dependency>
                 <groupId>be.dumbo.switchfully</groupId>
                 <artifactId>repository</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>be.dumbo.switchfully</groupId>
+                <artifactId>infrastructure</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

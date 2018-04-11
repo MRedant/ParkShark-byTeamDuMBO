@@ -2,7 +2,7 @@ package be.dumbo.switchfully.parkshark.service.member;
 
 import be.dumbo.switchfully.parkshark.domain.member.Member;
 
-// from order solution
+//copied from order solution switchfully
 public class MemberValidator {
 
     private boolean isARequiredFieldEmptyOrNull(Member member) {
