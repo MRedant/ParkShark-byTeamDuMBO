@@ -1,12 +1,12 @@
-/*
+
 package be.dumbo.switchfully.parkshark.repository.member;
 
-import be.dumbo.switchfully.parkshark.repository.Parksharkconfig;
+import be.dumbo.switchfully.parkshark.repository.ParkSharkConfig;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-@SpringJUnitConfig(Parksharkconfig.class)
+@SpringJUnitConfig(ParkSharkConfig.class)
 public class MemberRepositoryTest {
 
     private MemberRepository memberRepository;
@@ -21,4 +21,4 @@ public class MemberRepositoryTest {
 
     }
 }
-*/
+
