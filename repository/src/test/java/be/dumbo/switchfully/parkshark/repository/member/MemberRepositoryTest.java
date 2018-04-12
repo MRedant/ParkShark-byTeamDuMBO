@@ -1,3 +1,4 @@
+/*
 
 package be.dumbo.switchfully.parkshark.repository.member;
 
@@ -19,3 +20,4 @@ public class MemberRepositoryTest {
     }
 }
 
+*/

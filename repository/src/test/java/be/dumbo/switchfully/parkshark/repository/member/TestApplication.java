@@ -1,3 +1,4 @@
+/*
 package be.dumbo.switchfully.parkshark.repository.member;
 
 import org.springframework.boot.SpringApplication;
@@ -12,3 +13,4 @@ public class TestApplication {
     }
 
 }
+*/
