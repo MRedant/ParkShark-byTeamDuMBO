@@ -1,6 +1,6 @@
 package be.dumbo.switchfully.parkshark.api.contactinformation;
 
-import be.dumbo.switchfully.parkshark.domain.contactinformation.ContactInformation;
+//copied and adpated code from order solution switchfully
 
 public class ContactInformationDto {
 
@@ -8,12 +8,25 @@ public class ContactInformationDto {
     private String fixedLine;
     private String email;
 
-    public ContactInformationDto() {}
+    private ContactInformationDto() {}
 
-    public ContactInformationDto(String mobilePhone, String fixedLine, String email) {
+    public static ContactInformationDto contactInformationDto() {
+        return new ContactInformationDto();
+    }
+
+    public ContactInformationDto withMobilePhone(String mobilePhone) {
         this.mobilePhone = mobilePhone;
+        return this;
+    }
+
+    public ContactInformationDto withFixedLine(String fixedLine) {
         this.fixedLine = fixedLine;
+        return this;
+    }
+
+    public ContactInformationDto withEmail(String email) {
         this.email = email;
+        return this;
     }
 
     public String getMobilePhone() {
@@ -27,4 +40,5 @@ public class ContactInformationDto {
     public String getEmail() {
         return email;
     }
+
 }

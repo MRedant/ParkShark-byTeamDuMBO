@@ -7,7 +7,7 @@ public class ContactInformation {
     private String fixedLine;
     private String email;
 
-    private ContactInformation() { }
+    private ContactInformation() {}
 
     private ContactInformation(ContactInformationBuilder contactInformationBuilder) {
         this.mobilePhone = contactInformationBuilder.getMobilePhone();

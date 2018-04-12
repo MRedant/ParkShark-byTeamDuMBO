@@ -24,7 +24,7 @@ public class AddressValidator {
     }
 
     public boolean isValidForCreation(Address address) {
-        return !isARequiredFieldEmptyOrNull(address) && address.getId() == 0;
+        return !isARequiredFieldEmptyOrNull(address);
     }
 
     public void throwInvalidStateException(Address address, String type) {

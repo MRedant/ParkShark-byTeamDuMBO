@@ -1,5 +1,7 @@
 package be.dumbo.switchfully.parkshark.api.address;
 
+//copied and adpated code from order solution switchfully
+
 public class AddressDto {
 
     private String streetName;
@@ -33,4 +35,19 @@ public class AddressDto {
         return this;
     }
 
+    public String getStreetName() {
+        return streetName;
+    }
+
+    public String getStreetNumber() {
+        return streetNumber;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public String getLabel() {
+        return label;
+    }
 }

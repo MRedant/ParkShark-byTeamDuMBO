@@ -4,9 +4,11 @@ import be.dumbo.switchfully.parkshark.domain.contactinformation.ContactInformati
 import be.dumbo.switchfully.parkshark.repository.contactinformation.ContactInformationRepository;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 //copied from order solution switchfully
 
+@Named
 public class ContactInformationService {
 
     private ContactInformationRepository contactInformationRepository;
