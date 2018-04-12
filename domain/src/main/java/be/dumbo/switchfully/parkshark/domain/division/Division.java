@@ -8,8 +8,8 @@ public class Division {
 
     @Id
     @Column(name="ID")
-    @SequenceGenerator(name="division_seq", sequenceName = "DIVISION_SEQ", initialValue = 1, allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "division_seq")
+    @SequenceGenerator(name="divisions_seq", sequenceName = "DIVISIONS_SEQ", initialValue = 1, allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "divisions_seq")
     private Integer id;
     @Column(name="NAME")
     private String name;

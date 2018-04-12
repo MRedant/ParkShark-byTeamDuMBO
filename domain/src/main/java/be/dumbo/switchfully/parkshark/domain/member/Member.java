@@ -1,13 +1,9 @@
 package be.dumbo.switchfully.parkshark.domain.member;
 
 import be.dumbo.switchfully.parkshark.domain.address.Address;
-import be.dumbo.switchfully.parkshark.domain.contactinformation.ContactInformation;
 import be.dumbo.switchfully.parkshark.domain.licenseplate.LicensePlate;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 
@@ -17,11 +13,23 @@ public class Member {
 
     @Id
     @Column(name="ID")
+    @SequenceGenerator(name="members_seq", sequenceName = "MEMBERS_SEQ", initialValue = 1, allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "members_seq")
     private int id;
+    @Column(name="NAME")
     private String name;
+    @Embedded
     private Address address;
-    private ContactInformation contactInformation;
+    @Column(name="MOBILE_PHONE")
+    private String mobilePhone;
+    @Column(name="FIXED_LINE")
+    private String fixedLine;
+    @Column(name="EMAIL")
+    private String email;
+    @OneToOne
+    @JoinColumn(name="")
     private LicensePlate licensePlate;
+    @Column(name="REGISTRATION_DATE")
     private LocalDate registrationDate;
 
     private Member() {}
@@ -29,7 +37,8 @@ public class Member {
     private Member(MemberBuilder memberBuilder) {
         this.name = memberBuilder.getName();
         this.address = memberBuilder.getAddress();
-        this.contactInformation = memberBuilder.getContactInformation();
+        this.mobilePhone = memberBuilder.getMobilePhone();
+        this.fixedLine = memberBuilder.getFixedLine();
         this.licensePlate = memberBuilder.getLicensePlate();
         this.registrationDate = memberBuilder.getRegistrationDate();
     }
@@ -46,10 +55,6 @@ public class Member {
         return address;
     }
 
-    public ContactInformation getContactInformation() {
-        return contactInformation;
-    }
-
     public LicensePlate getLicensePlate() {
         return licensePlate;
     }
@@ -58,13 +63,21 @@ public class Member {
         return registrationDate;
     }
 
+    public String getMobilePhone() { return mobilePhone; }
+
+    public String getFixedLine() { return fixedLine; }
+
+    public String getEmail() {  return email; }
+
     public static class MemberBuilder {
 
         private String name;
         private Address address;
-        private ContactInformation contactInformation;
         private LicensePlate licensePlate;
         private LocalDate registrationDate;
+        private String mobilePhone;
+        private String fixedLine;
+        private String email;
 
         private MemberBuilder() {}
 
@@ -86,10 +99,6 @@ public class Member {
             return this;
         }
 
-        public MemberBuilder withContactInformation(ContactInformation contactInformation) {
-            this.contactInformation = contactInformation;
-            return this;
-        }
 
         public MemberBuilder withLicensePlate(LicensePlate licensePlate) {
             this.licensePlate = licensePlate;
@@ -109,16 +118,24 @@ public class Member {
             return address;
         }
 
-        public ContactInformation getContactInformation() {
-            return contactInformation;
-        }
-
         public LicensePlate getLicensePlate() {
             return licensePlate;
         }
 
         public LocalDate getRegistrationDate() {
             return registrationDate;
+        }
+
+        public String getMobilePhone() {
+            return mobilePhone;
+        }
+
+        public String getFixedLine() {
+            return fixedLine;
+        }
+
+        public String getEmail() {
+            return email;
         }
     }
 }

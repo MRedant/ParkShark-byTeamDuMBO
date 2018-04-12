@@ -1,16 +1,24 @@
 package be.dumbo.switchfully.parkshark.domain.address;
 
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+
+@Embeddable
 public class Address {
 
+    @Column(name="STREET_NAME")
     private String streetName;
+    @Column(name="STREET_NUMBER")
     private String streetNumber;
+    @Column(name="POSTAL_CODE")
     private String postalCode;
+    @Column(name="LABEL")
     private String label;
 
     private Address() {
     }
 
-    public Address(AddressBuilder addressBuilder) {
+    private Address(AddressBuilder addressBuilder) {
         this.streetName = addressBuilder.getStreetName();
         this.streetNumber = addressBuilder.getStreetNumber();
         this.postalCode = addressBuilder.getPostalCode();
