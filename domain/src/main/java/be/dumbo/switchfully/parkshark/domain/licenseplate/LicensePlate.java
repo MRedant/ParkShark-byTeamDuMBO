@@ -1,5 +1,6 @@
 package be.dumbo.switchfully.parkshark.domain.licenseplate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -10,7 +11,9 @@ public class LicensePlate {
 
     @Id
     private int id;
+    @Column(name="PLATE_NUMBER")
     private String plateNumber;
+    @Column(name="ISSUING_COUNTRY")
     private String issuingCountry;
 
     private LicensePlate() {}

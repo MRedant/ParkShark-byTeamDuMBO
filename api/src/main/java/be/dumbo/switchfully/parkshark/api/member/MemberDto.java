@@ -1,18 +1,23 @@
 package be.dumbo.switchfully.parkshark.api.member;
 
-//copied and adpated code from order solution switchfully
+//copied and adapted code from order solution switchfully
 
-import be.dumbo.switchfully.parkshark.api.address.AddressDto;
-import be.dumbo.switchfully.parkshark.api.contactinformation.ContactInformationDto;
 import be.dumbo.switchfully.parkshark.api.licenseplate.LicensePlateDto;
+
+import java.time.LocalDate;
 
 public class MemberDto {
 
     private String name;
-    private AddressDto address;
-    private ContactInformationDto contactInformation;
     private LicensePlateDto licensePlate;
-    private String registrationDate;
+    private LocalDate registrationDate;
+    private String streetName;
+    private String streetNumber;
+    private String postalCode;
+    private String label;
+    private String mobilePhone;
+    private String fixedLine;
+    private String email;
 
     private MemberDto() {}
 
@@ -25,23 +30,48 @@ public class MemberDto {
         return this;
     }
 
-    public MemberDto withAddress(AddressDto address) {
-        this.address = address;
-        return this;
-    }
-
-    public MemberDto withContactInformation(ContactInformationDto contactInformation) {
-        this.contactInformation = contactInformation;
-        return this;
-    }
-
     public MemberDto withLicensePlate(LicensePlateDto licensePlate) {
         this.licensePlate = licensePlate;
         return this;
     }
 
-    public MemberDto withRegistrationDate(String registrationDate) {
+    public MemberDto withRegistrationDate(LocalDate registrationDate) {
         this.registrationDate = registrationDate;
+        return this;
+    }
+
+    public MemberDto withStreetName(String streetName) {
+        this.streetName = streetName;
+        return this;
+    }
+
+    public MemberDto withStreetNumber(String streetNumber) {
+        this.streetNumber = streetNumber;
+        return this;
+    }
+
+    public MemberDto withPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+        return this;
+    }
+
+    public MemberDto withLabel(String label) {
+        this.label = label;
+        return this;
+    }
+
+    public MemberDto withMobilePhone(String mobilePhone) {
+        this.mobilePhone = mobilePhone;
+        return this;
+    }
+
+    public MemberDto withFixedLine(String fixedLine) {
+        this.fixedLine = fixedLine;
+        return this;
+    }
+
+    public MemberDto withEmail(String email) {
+        this.email = email;
         return this;
     }
 
@@ -49,19 +79,41 @@ public class MemberDto {
         return name;
     }
 
-    public AddressDto getAddress() {
-        return address;
-    }
 
-    public ContactInformationDto getContactInformation() {
-        return contactInformation;
-    }
 
     public LicensePlateDto getLicensePlate() {
         return licensePlate;
     }
 
-    public String getRegistrationDate() {
+    public LocalDate getRegistrationDate() {
         return registrationDate;
+    }
+
+    public String getStreetName() {
+        return streetName;
+    }
+
+    public String getStreetNumber() {
+        return streetNumber;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public String getMobilePhone() {
+        return mobilePhone;
+    }
+
+    public String getFixedLine() {
+        return fixedLine;
+    }
+
+    public String getEmail() {
+        return email;
     }
 }
