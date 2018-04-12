@@ -10,7 +10,7 @@ public class MemberController {
 
     public static final String RESOURCE_NAME = "member";
 
-    private MemberMapper memberMapper;
+    //private MemberMapper memberMapper;
     private MemberService memberService;
 
 }

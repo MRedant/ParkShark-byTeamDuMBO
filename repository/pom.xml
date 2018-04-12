@@ -3,31 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <dependencies>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>5.2.16.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-orm</artifactId>
-            <version>5.0.5.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>5.0.5.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>be.dumbo.switchfully</groupId>
-            <artifactId>domain</artifactId>
-        </dependency>
-    </dependencies>
 
     <parent>
         <artifactId>parkshark</artifactId>
@@ -36,5 +11,12 @@
     </parent>
 
     <artifactId>repository</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>be.dumbo.switchfully</groupId>
+            <artifactId>domain</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

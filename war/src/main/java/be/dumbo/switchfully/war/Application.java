@@ -3,7 +3,7 @@ package be.dumbo.switchfully.war;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = "be.diher81.switchfully")
+@SpringBootApplication(scanBasePackages = "be.dumbo.switchfully")
 public class Application {
 
 
