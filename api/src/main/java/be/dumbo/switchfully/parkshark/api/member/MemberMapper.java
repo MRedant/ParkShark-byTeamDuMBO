@@ -1,7 +1,7 @@
 
 package be.dumbo.switchfully.parkshark.api.member;
 
-//copied and adpated code from order solution switchfully
+//copied and adapated code from order solution switchfully
 
 import be.dumbo.switchfully.parkshark.api.address.AddressMapper;
 import be.dumbo.switchfully.parkshark.api.licenseplate.LicensePlateMapper;
@@ -33,7 +33,7 @@ public class MemberMapper extends Mapper<MemberDto, Member> {
         return memberDto()
                 .withName(member.getName())
                 .withLicensePlate(licensePlateMapper.toDto(member.getLicensePlate()))
-                .withRegistrationDate(member.getRegistrationDate());
+                .withRegistrationDate(member.getRegistrationDate().toString());
 
     }
 
@@ -42,7 +42,7 @@ public class MemberMapper extends Mapper<MemberDto, Member> {
         return Member.MemberBuilder.member()
                 .withName(memberDto.getName())
                 .withLicensePlate(licensePlateMapper.toDomain(memberDto.getLicensePlate()))
-                .withRegistrationDate(memberDto.getRegistrationDate())
+                .withRegistrationDate(LocalDate.parse(memberDto.getRegistrationDate()))
                 .build();
     }
 }

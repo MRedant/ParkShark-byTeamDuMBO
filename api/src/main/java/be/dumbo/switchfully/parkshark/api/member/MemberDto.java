@@ -10,7 +10,7 @@ public class MemberDto {
 
     private String name;
     private LicensePlateDto licensePlate;
-    private LocalDate registrationDate;
+    private String registrationDate;
     private String streetName;
     private String streetNumber;
     private String postalCode;
@@ -35,7 +35,7 @@ public class MemberDto {
         return this;
     }
 
-    public MemberDto withRegistrationDate(LocalDate registrationDate) {
+    public MemberDto withRegistrationDate(String registrationDate) {
         this.registrationDate = registrationDate;
         return this;
     }
@@ -85,7 +85,7 @@ public class MemberDto {
         return licensePlate;
     }
 
-    public LocalDate getRegistrationDate() {
+    public String getRegistrationDate() {
         return registrationDate;
     }
 

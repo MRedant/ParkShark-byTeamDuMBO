@@ -1,15 +1,15 @@
 package be.dumbo.switchfully.parkshark.domain.licenseplate;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="LICENSEPLATES")
 public class LicensePlate {
 
     @Id
+    @Column(name="ID")
+    @SequenceGenerator(name="licenseplates_seq", sequenceName = "LICENSEPLATES_SEQ", initialValue = 1, allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "licenseplates_seq")
     private int id;
     @Column(name="PLATE_NUMBER")
     private String plateNumber;
