@@ -4,11 +4,19 @@ import be.dumbo.switchfully.parkshark.domain.address.Address;
 import be.dumbo.switchfully.parkshark.domain.contactinformation.ContactInformation;
 import be.dumbo.switchfully.parkshark.domain.licenseplate.LicensePlate;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDate;
 
 
+@Entity
+@Table(name="MEMBERS")
 public class Member {
 
+    @Id
+    @Column(name="ID")
     private int id;
     private String name;
     private Address address;
