@@ -1,6 +1,6 @@
 package be.dumbo.switchfully.parkshark.repository.division;
 
-import be.dumbo.switchfully.Application;
+import be.dumbo.switchfully.parkshark.Application;
 import be.dumbo.switchfully.parkshark.domain.division.Division;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
@@ -8,8 +8,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
-//import be.dumbo.switchfully.Application;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes=Application.class)
