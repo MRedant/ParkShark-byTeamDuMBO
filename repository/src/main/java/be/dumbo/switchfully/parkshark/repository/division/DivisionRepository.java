@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Repository
 @Transactional
@@ -17,5 +18,13 @@ public class DivisionRepository {
     public Division save(Division division) {
         entityManager.persist(division);
         return division;
+    }
+
+    public List<Division> getAll() {
+        return null;
+    }
+
+    public void deleteAll() {
+        entityManager.clear();
     }
 }

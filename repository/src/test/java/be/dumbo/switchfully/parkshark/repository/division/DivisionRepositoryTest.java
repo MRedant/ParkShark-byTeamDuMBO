@@ -2,13 +2,14 @@ package be.dumbo.switchfully.parkshark.repository.division;
 
 import be.dumbo.switchfully.Application;
 import be.dumbo.switchfully.parkshark.domain.division.Division;
-//import be.dumbo.switchfully.Application;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+//import be.dumbo.switchfully.Application;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes=Application.class)
@@ -35,6 +36,18 @@ public class DivisionRepositoryTest {
         Assertions.assertThat(returnedDivision).isNotNull();
         Assertions.assertThat(returnedDivision.getId()).isNotZero();
     }
+
+//    @Test
+//    public void getAll_returnsAllDivisions() {
+//        //GIVEN
+//        Division division1 = divisionRepository.save(new Division("DivisionABC","SomeOldName","Maarten Supreme Leader"));
+//        Division division2 = divisionRepository.save(new Division("DivisionDEF","SomeOtherOldName","Omar"));
+//        Division division3 = divisionRepository.save(new Division("DivisionGHI","SomeLastOldName","Brecht"));
+//        //WHEN
+//        List<Division> retrievedDivisions = divisionRepository.getAll();
+//        //THEN
+//        Assertions.assertThat(retrievedDivisions).containsExactly(division1,division2,division3);
+//    }
 
 }
 
