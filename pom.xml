@@ -87,7 +87,7 @@
             <scope>test</scope>
             <version>${spring.boot.version}</version>
         </dependency>
-        
+
     </dependencies>
 
 </project>
