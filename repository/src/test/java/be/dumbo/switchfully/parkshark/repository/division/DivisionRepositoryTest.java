@@ -2,7 +2,6 @@ package be.dumbo.switchfully.parkshark.repository.division;
 
 import be.dumbo.switchfully.Application;
 import be.dumbo.switchfully.parkshark.domain.division.Division;
-//import be.dumbo.switchfully.Application;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,21 +15,13 @@ public class DivisionRepositoryTest {
 
     @Autowired
     private DivisionRepository divisionRepository;
-//
-//    public DivisionRepositoryTest() {
-//    }
-//
-//
-//    DivisionRepositoryTest(DivisionRepository divisionRepository) {
-//        this.divisionRepository = divisionRepository;
-//    }
 
     @Test
     public void save_createDivisionReturnsDivisionWithId() {
         //GIVEN
 
         //WHEN
-        Division returnedDivision = divisionRepository.save(new Division("DivisionABC","SomeOldName","Maarten Supreme Leader"));
+        Division returnedDivision = divisionRepository.save(new Division("DivisionABC","SomeOldName","Jan"));
         //THEN
         Assertions.assertThat(returnedDivision).isNotNull();
         Assertions.assertThat(returnedDivision.getId()).isNotZero();

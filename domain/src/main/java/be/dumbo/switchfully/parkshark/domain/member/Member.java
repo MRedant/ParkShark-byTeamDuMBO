@@ -6,7 +6,6 @@ import be.dumbo.switchfully.parkshark.domain.licenseplate.LicensePlate;
 import javax.persistence.*;
 import java.time.LocalDate;
 
-
 @Entity
 @Table(name="MEMBERS")
 public class Member {
@@ -26,8 +25,8 @@ public class Member {
     private String fixedLine;
     @Column(name="EMAIL")
     private String email;
-    @OneToOne
-    @JoinColumn(name="FK_LICENSE_PLATE")
+    @OneToOne(cascade = {CascadeType.PERSIST})
+    @JoinColumn(name="LICENSE_PLATE_ID")
     private LicensePlate licensePlate;
     @Column(name="REGISTRATION_DATE")
     private LocalDate registrationDate;
@@ -39,8 +38,9 @@ public class Member {
         this.address = memberBuilder.getAddress();
         this.mobilePhone = memberBuilder.getMobilePhone();
         this.fixedLine = memberBuilder.getFixedLine();
+        this.email = memberBuilder.getEmail();
         this.licensePlate = memberBuilder.getLicensePlate();
-        this.registrationDate = memberBuilder.getRegistrationDate();
+        this.registrationDate = LocalDate.now();
     }
 
     public int getId() {
@@ -74,7 +74,6 @@ public class Member {
         private String name;
         private Address address;
         private LicensePlate licensePlate;
-        private LocalDate registrationDate;
         private String mobilePhone;
         private String fixedLine;
         private String email;
@@ -105,8 +104,17 @@ public class Member {
             return this;
         }
 
-        public MemberBuilder withRegistrationDate(LocalDate registrationDate) {
-            this.registrationDate = registrationDate;
+        public MemberBuilder withEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public MemberBuilder withMobilePhone(String mobilePhone) {
+            this.mobilePhone = mobilePhone;
+            return this;
+        }
+
+        public MemberBuilder withFixedLine(String fixedLine) {
+            this.fixedLine = fixedLine;
             return this;
         }
 
@@ -120,10 +128,6 @@ public class Member {
 
         public LicensePlate getLicensePlate() {
             return licensePlate;
-        }
-
-        public LocalDate getRegistrationDate() {
-            return registrationDate;
         }
 
         public String getMobilePhone() {
