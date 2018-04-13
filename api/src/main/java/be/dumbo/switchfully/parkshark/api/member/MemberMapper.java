@@ -11,8 +11,6 @@ import be.dumbo.switchfully.parkshark.infrastructure.dto.Mapper;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import java.time.LocalDate;
-
 import static be.dumbo.switchfully.parkshark.api.member.MemberDto.memberDto;
 
 @Named
@@ -22,8 +20,7 @@ public class MemberMapper extends Mapper<MemberDto, Member> {
     private LicensePlateMapper licensePlateMapper;
 
     @Inject
-    public MemberMapper(AddressMapper addressMapper
-            , LicensePlateMapper licensePlateMapper) {
+    public MemberMapper(AddressMapper addressMapper, LicensePlateMapper licensePlateMapper) {
         this.addressMapper = addressMapper;
         this.licensePlateMapper = licensePlateMapper;
 
@@ -32,15 +29,14 @@ public class MemberMapper extends Mapper<MemberDto, Member> {
     @Override
     public MemberDto toDto(Member member) {
         return memberDto()
-                .withId(member.getId())
-                .withName(member.getName());
+                .withId(member.getId());
     }
 
     @Override
     public Member toDomain(MemberDto memberDto) {
         return Member.MemberBuilder.member()
                 .withName(memberDto.getName())
-                .withAddress(addressMapper.toDomain(memberDto.getAddressDto()))
+                .withAddress(addressMapper.toDomain(memberDto.getAddress()))
                 .withMobilePhone(memberDto.getMobilePhone())
                 .withFixedLine(memberDto.getFixedLine())
                 .withEmail(memberDto.getEmail())

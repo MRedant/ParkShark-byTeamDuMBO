@@ -9,9 +9,9 @@ public class MemberDto {
 
     private int id;
     private String name;
-    private LicensePlateDto licensePlateDto;
+    private LicensePlateDto licensePlate;
     private String registrationDate;
-    private AddressDto addressDto;
+    private AddressDto address;
     private String mobilePhone;
     private String fixedLine;
     private String email;
@@ -22,13 +22,12 @@ public class MemberDto {
         return new MemberDto();
     }
 
-
     public String getName() {
         return name;
     }
 
     public LicensePlateDto getLicensePlate() {
-        return licensePlateDto;
+        return licensePlate;
     }
 
     public String getRegistrationDate() {
@@ -51,12 +50,8 @@ public class MemberDto {
         return email;
     }
 
-    public LicensePlateDto getLicensePlateDto() {
-        return licensePlateDto;
-    }
-
-    public AddressDto getAddressDto() {
-        return addressDto;
+    public AddressDto getAddress() {
+        return address;
     }
 
     public MemberDto withName(String name) {
@@ -69,13 +64,13 @@ public class MemberDto {
         return this;
     }
 
-    public MemberDto withAddress (AddressDto addressDto){
-        this.addressDto = addressDto;
+    public MemberDto withAddress (AddressDto address){
+        this.address = address;
         return this;
     }
 
-    public MemberDto withLicensePlate(LicensePlateDto licensePlateDto) {
-        this.licensePlateDto = licensePlateDto;
+    public MemberDto withLicensePlate(LicensePlateDto licensePlate) {
+        this.licensePlate = licensePlate;
         return this;
     }
 
