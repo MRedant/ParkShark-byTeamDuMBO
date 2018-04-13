@@ -1,10 +1,10 @@
 
 package be.dumbo.switchfully.parkshark.repository.member;
 
-import be.dumbo.switchfully.Application;
 import be.dumbo.switchfully.parkshark.domain.address.Address;
 import be.dumbo.switchfully.parkshark.domain.licenseplate.LicensePlate;
 import be.dumbo.switchfully.parkshark.domain.member.Member;
+import be.dumbo.switchfully.parkshark.infrastructure.TestApplication;
 import be.dumbo.switchfully.parkshark.repository.licenseplate.LicensePlateRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.Before;
@@ -16,7 +16,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.transaction.Transactional;
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = TestApplication.class)
 @Transactional
 public class MemberRepositoryTest {
 

@@ -1,11 +1,9 @@
 package be.dumbo.switchfully.parkshark.service.member;
 
-import be.dumbo.switchfully.Application;
 import be.dumbo.switchfully.parkshark.domain.address.Address;
 import be.dumbo.switchfully.parkshark.domain.licenseplate.LicensePlate;
 import be.dumbo.switchfully.parkshark.domain.member.Member;
-import be.dumbo.switchfully.parkshark.service.licenseplate.LicensePlateService;
-import org.assertj.core.api.Assertions;
+import be.dumbo.switchfully.parkshark.infrastructure.TestApplication;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,11 +11,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.assertj.core.api.Assertions.*;
-import static org.junit.Assert.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = TestApplication.class)
 public class MemberServiceTest {
 
     @Autowired

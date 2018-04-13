@@ -12,4 +12,19 @@
 
     <artifactId>infrastructure</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>oracle</groupId>
+            <artifactId>ojdbc8</artifactId>
+            <version>12.2.0.1</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/libraries/ojdbc8.jar</systemPath>
+        </dependency>
+    </dependencies>
+
 </project>

@@ -1,7 +1,7 @@
 package be.dumbo.switchfully.parkshark.repository.licenseplate;
 
-import be.dumbo.switchfully.Application;
 import be.dumbo.switchfully.parkshark.domain.licenseplate.LicensePlate;
+import be.dumbo.switchfully.parkshark.infrastructure.TestApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ import javax.transaction.Transactional;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes=Application.class)
+@SpringBootTest(classes=TestApplication.class)
 @Transactional
 public class LicensePlateRepositoryTest {
 
