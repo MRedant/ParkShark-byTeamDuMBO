@@ -3,13 +3,13 @@ package be.dumbo.switchfully.parkshark.domain.division;
 import javax.persistence.*;
 
 @Entity
-@Table(name="DIVISION")
+@Table(name="DIVISIONS")
 public class Division {
 
     @Id
     @Column(name="ID")
-    @SequenceGenerator(name="divisions_seq", sequenceName = "DIVISIONS_SEQ", initialValue = 1, allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "divisions_seq")
+    @SequenceGenerator(name="division_seq", sequenceName = "DIVISIONS_SEQ", initialValue = 1, allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "division_seq")
     private Integer id;
     @Column(name="NAME")
     private String name;
@@ -36,9 +36,23 @@ public class Division {
         this.director = director;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getOriginalName() {
+        return originalName;
+    }
+
+    public String getDirector() {
+        return director;
+    }
+
+    public Integer getParentDivision() {
+        return parentDivision;
+    }
 
     public Integer getId() {
         return id;
-
     }
 }

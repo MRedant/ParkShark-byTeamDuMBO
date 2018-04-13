@@ -1,9 +1,11 @@
-package be.dumbo.switchfully.war;
+package be.dumbo.switchfully;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@SpringBootApplication(scanBasePackages = "be.dumbo.switchfully")
+@SpringBootApplication
+@EnableTransactionManagement
 public class Application {
 
 
