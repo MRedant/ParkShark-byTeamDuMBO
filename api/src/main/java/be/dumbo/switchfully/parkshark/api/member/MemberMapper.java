@@ -26,23 +26,25 @@ public class MemberMapper extends Mapper<MemberDto, Member> {
             , LicensePlateMapper licensePlateMapper) {
         this.addressMapper = addressMapper;
         this.licensePlateMapper = licensePlateMapper;
+
     }
 
     @Override
     public MemberDto toDto(Member member) {
         return memberDto()
-                .withName(member.getName())
-                .withLicensePlate(licensePlateMapper.toDto(member.getLicensePlate()))
-                .withRegistrationDate(member.getRegistrationDate().toString());
-
+                .withId(member.getId())
+                .withName(member.getName());
     }
 
     @Override
     public Member toDomain(MemberDto memberDto) {
         return Member.MemberBuilder.member()
                 .withName(memberDto.getName())
+                .withAddress(addressMapper.toDomain(memberDto.getAddressDto()))
+                .withMobilePhone(memberDto.getMobilePhone())
+                .withFixedLine(memberDto.getFixedLine())
+                .withEmail(memberDto.getEmail())
                 .withLicensePlate(licensePlateMapper.toDomain(memberDto.getLicensePlate()))
-                .withRegistrationDate(LocalDate.parse(memberDto.getRegistrationDate()))
                 .build();
     }
 }

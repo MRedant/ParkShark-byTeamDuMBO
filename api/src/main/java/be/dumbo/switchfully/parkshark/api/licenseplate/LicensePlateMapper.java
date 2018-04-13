@@ -12,6 +12,7 @@ public class LicensePlateMapper extends Mapper<LicensePlateDto, LicensePlate>{
     @Override
     public LicensePlateDto toDto(LicensePlate licensePlate) {
         return LicensePlateDto.licensePlateDto()
+                .withId(licensePlate.getId())
                 .withPlateNumber(licensePlate.getPlateNumber())
                 .withIssuingCountry(licensePlate.getIssuingCountry());
     }

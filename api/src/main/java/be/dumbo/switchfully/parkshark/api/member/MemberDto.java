@@ -2,19 +2,16 @@ package be.dumbo.switchfully.parkshark.api.member;
 
 //copied and adapted code from order solution switchfully
 
+import be.dumbo.switchfully.parkshark.api.address.AddressDto;
 import be.dumbo.switchfully.parkshark.api.licenseplate.LicensePlateDto;
-
-import java.time.LocalDate;
 
 public class MemberDto {
 
+    private int id;
     private String name;
-    private LicensePlateDto licensePlate;
+    private LicensePlateDto licensePlateDto;
     private String registrationDate;
-    private String streetName;
-    private String streetNumber;
-    private String postalCode;
-    private String label;
+    private AddressDto addressDto;
     private String mobilePhone;
     private String fixedLine;
     private String email;
@@ -25,38 +22,65 @@ public class MemberDto {
         return new MemberDto();
     }
 
+
+    public String getName() {
+        return name;
+    }
+
+    public LicensePlateDto getLicensePlate() {
+        return licensePlateDto;
+    }
+
+    public String getRegistrationDate() {
+        return registrationDate;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getMobilePhone() {
+        return mobilePhone;
+    }
+
+    public String getFixedLine() {
+        return fixedLine;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public LicensePlateDto getLicensePlateDto() {
+        return licensePlateDto;
+    }
+
+    public AddressDto getAddressDto() {
+        return addressDto;
+    }
+
     public MemberDto withName(String name) {
         this.name = name;
         return this;
     }
 
-    public MemberDto withLicensePlate(LicensePlateDto licensePlate) {
-        this.licensePlate = licensePlate;
+    public MemberDto withId(int id) {
+        this.id = id;
+        return this;
+    }
+
+    public MemberDto withAddress (AddressDto addressDto){
+        this.addressDto = addressDto;
+        return this;
+    }
+
+    public MemberDto withLicensePlate(LicensePlateDto licensePlateDto) {
+        this.licensePlateDto = licensePlateDto;
         return this;
     }
 
     public MemberDto withRegistrationDate(String registrationDate) {
         this.registrationDate = registrationDate;
-        return this;
-    }
-
-    public MemberDto withStreetName(String streetName) {
-        this.streetName = streetName;
-        return this;
-    }
-
-    public MemberDto withStreetNumber(String streetNumber) {
-        this.streetNumber = streetNumber;
-        return this;
-    }
-
-    public MemberDto withPostalCode(String postalCode) {
-        this.postalCode = postalCode;
-        return this;
-    }
-
-    public MemberDto withLabel(String label) {
-        this.label = label;
         return this;
     }
 
@@ -75,45 +99,4 @@ public class MemberDto {
         return this;
     }
 
-    public String getName() {
-        return name;
-    }
-
-
-
-    public LicensePlateDto getLicensePlate() {
-        return licensePlate;
-    }
-
-    public String getRegistrationDate() {
-        return registrationDate;
-    }
-
-    public String getStreetName() {
-        return streetName;
-    }
-
-    public String getStreetNumber() {
-        return streetNumber;
-    }
-
-    public String getPostalCode() {
-        return postalCode;
-    }
-
-    public String getLabel() {
-        return label;
-    }
-
-    public String getMobilePhone() {
-        return mobilePhone;
-    }
-
-    public String getFixedLine() {
-        return fixedLine;
-    }
-
-    public String getEmail() {
-        return email;
-    }
 }

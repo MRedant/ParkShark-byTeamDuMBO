@@ -4,6 +4,7 @@ package be.dumbo.switchfully.parkshark.api.licenseplate;
 
 public class LicensePlateDto {
 
+    private int id;
     private String plateNumber;
     private String issuingCountry;
 
@@ -23,6 +24,15 @@ public class LicensePlateDto {
         return this;
     }
 
+    public LicensePlateDto withId(int id) {
+        this.id = id;
+        return this;
+    }
+
+    public int getId() {
+        return id;
+    }
+
     public String getPlateNumber() {
         return plateNumber;
     }
@@ -30,4 +40,6 @@ public class LicensePlateDto {
     public String getIssuingCountry() {
         return issuingCountry;
     }
+
+
 }
