@@ -2,7 +2,11 @@ package be.dumbo.switchfully.parkshark.service.member;
 
 import be.dumbo.switchfully.parkshark.domain.member.Member;
 
+import javax.inject.Named;
+
 //copied from order solution switchfully
+
+@Named
 public class MemberValidator {
 
     private boolean isARequiredFieldEmptyOrNull(Member member) {

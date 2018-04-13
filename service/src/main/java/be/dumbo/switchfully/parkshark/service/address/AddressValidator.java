@@ -3,9 +3,12 @@ package be.dumbo.switchfully.parkshark.service.address;
 import be.dumbo.switchfully.parkshark.domain.address.Address;
 import org.springframework.stereotype.Repository;
 
+import javax.inject.Named;
+
 //copied from order solution switchfully
 
-@Repository
+
+@Named
 public class AddressValidator {
 
     private boolean isARequiredFieldEmptyOrNull(Address address) {

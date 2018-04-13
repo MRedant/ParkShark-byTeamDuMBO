@@ -4,6 +4,9 @@ package be.dumbo.switchfully.parkshark.service.licenseplate;
 
 import be.dumbo.switchfully.parkshark.domain.licenseplate.LicensePlate;
 
+import javax.inject.Named;
+
+@Named
 public class LicensePlateValidator {
 
     public boolean isValidForCreation(LicensePlate licensePlate) {

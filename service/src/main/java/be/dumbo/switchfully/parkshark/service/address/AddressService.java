@@ -5,9 +5,11 @@ import be.dumbo.switchfully.parkshark.repository.address.AddressRepository;
 
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.transaction.Transactional;
 
 //copied from order solution switchfully
 
+@Transactional
 @Named
 public class AddressService {
 

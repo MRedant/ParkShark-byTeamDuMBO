@@ -7,8 +7,10 @@ import be.dumbo.switchfully.parkshark.repository.licenseplate.LicensePlateReposi
 
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.transaction.Transactional;
 
 @Named
+@Transactional
 public class LicensePlateService {
 
     private LicensePlateRepository licensePlateRepository;
