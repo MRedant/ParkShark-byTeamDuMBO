@@ -17,14 +17,6 @@ public class DivisionRepositoryTest {
 
     @Autowired
     private DivisionRepository divisionRepository;
-//
-//    public DivisionRepositoryTest() {
-//    }
-//
-//
-//    DivisionRepositoryTest(DivisionRepository divisionRepository) {
-//        this.divisionRepository = divisionRepository;
-//    }
 
     @Test
     public void deleteAll_givenNotEmptyDivisionTable_thenEmptyDivisionTable() {

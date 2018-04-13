@@ -71,7 +71,19 @@ public class Division {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(id, name, originalName, director, parentDivision);
+    }
+
+    public static class DivisionBuilder {
+
+        private Integer id;
+        private String name;
+        private String originalName;
+        private String director;
+        private Integer parentDivision;
+
+
+
+
     }
 }
