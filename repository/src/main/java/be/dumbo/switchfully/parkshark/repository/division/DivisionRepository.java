@@ -21,10 +21,11 @@ public class DivisionRepository {
     }
 
     public List<Division> getAll() {
-        return null;
+        return entityManager.createQuery("from Division", Division.class).getResultList();
     }
 
     public void deleteAll() {
-        entityManager.clear();
+
+        entityManager.createQuery("delete from Division d").executeUpdate();
     }
 }

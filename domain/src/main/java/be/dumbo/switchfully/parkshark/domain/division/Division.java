@@ -1,6 +1,7 @@
 package be.dumbo.switchfully.parkshark.domain.division;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table(name="DIVISIONS")
@@ -54,5 +55,23 @@ public class Division {
 
     public Integer getId() {
         return id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Division division = (Division) o;
+        return Objects.equals(id, division.id) &&
+                Objects.equals(name, division.name) &&
+                Objects.equals(originalName, division.originalName) &&
+                Objects.equals(director, division.director) &&
+                Objects.equals(parentDivision, division.parentDivision);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(id, name, originalName, director, parentDivision);
     }
 }
