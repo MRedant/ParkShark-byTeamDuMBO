@@ -1,4 +1,4 @@
-package be.dumbo.switchfully.parkshark.infrastructure.dto;
+package be.dumbo.switchfully.parkshark.infrastructure;
 
 //copied from switchfully order solution
 

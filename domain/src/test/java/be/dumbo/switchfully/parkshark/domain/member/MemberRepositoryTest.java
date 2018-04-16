@@ -1,11 +1,10 @@
 
-package be.dumbo.switchfully.parkshark.repository.member;
+package be.dumbo.switchfully.parkshark.domain.member;
 
 import be.dumbo.switchfully.parkshark.domain.address.Address;
 import be.dumbo.switchfully.parkshark.domain.licenseplate.LicensePlate;
-import be.dumbo.switchfully.parkshark.domain.member.Member;
+import be.dumbo.switchfully.parkshark.domain.licenseplate.LicensePlateRepository;
 import be.dumbo.switchfully.parkshark.infrastructure.TestApplication;
-import be.dumbo.switchfully.parkshark.repository.licenseplate.LicensePlateRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,12 +24,11 @@ public class MemberRepositoryTest {
     @Autowired
     private LicensePlateRepository licensePlateRepository;
 
-    private LicensePlate returnedLicenceplate;
     private Member returnedMember;
 
     @Before
     public void setUp() throws Exception {
-        returnedLicenceplate = licensePlateRepository.save(LicensePlate.LicensePlateBuilder.licensePlate()
+        LicensePlate returnedLicenceplate = licensePlateRepository.save(LicensePlate.LicensePlateBuilder.licensePlate()
                 .withPlateNumber("1-abc-213")
                 .withIssuingCountry("BE")
                 .build());

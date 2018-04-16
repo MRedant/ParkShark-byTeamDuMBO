@@ -3,7 +3,7 @@ package be.dumbo.switchfully.parkshark.api.licenseplate;
 //copied and adpated code from order solution switchfully
 
 import be.dumbo.switchfully.parkshark.domain.licenseplate.LicensePlate;
-import be.dumbo.switchfully.parkshark.infrastructure.dto.Mapper;
+import be.dumbo.switchfully.parkshark.infrastructure.Mapper;
 
 import javax.inject.Named;
 

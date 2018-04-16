@@ -1,6 +1,7 @@
-package be.dumbo.switchfully.parkshark.repository.licenseplate;
+package be.dumbo.switchfully.parkshark.domain.licenceplate;
 
 import be.dumbo.switchfully.parkshark.domain.licenseplate.LicensePlate;
+import be.dumbo.switchfully.parkshark.domain.licenseplate.LicensePlateRepository;
 import be.dumbo.switchfully.parkshark.infrastructure.TestApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,7 +22,7 @@ public class LicensePlateRepositoryTest {
     private LicensePlateRepository licensePlateRepository;
 
     @Test
-    public void saveLicenceplate_happyPath() {
+    public void saveLicensePlate_happyPath() {
         //GIVEN
 
         //WHEN

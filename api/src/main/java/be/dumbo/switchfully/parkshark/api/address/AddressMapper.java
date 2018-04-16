@@ -3,7 +3,7 @@ package be.dumbo.switchfully.parkshark.api.address;
 //copied and adpated code from order solution switchfully
 
 import be.dumbo.switchfully.parkshark.domain.address.Address;
-import be.dumbo.switchfully.parkshark.infrastructure.dto.Mapper;
+import be.dumbo.switchfully.parkshark.infrastructure.Mapper;
 
 import javax.inject.Named;
 

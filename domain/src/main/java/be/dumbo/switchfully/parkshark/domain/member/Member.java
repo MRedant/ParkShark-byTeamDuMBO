@@ -19,27 +19,27 @@ public class Member {
     private String name;
     @Embedded
     private Address address;
+    @OneToOne(cascade = {CascadeType.PERSIST})
+    @JoinColumn(name="LICENSE_PLATE_ID")
+    private LicensePlate licensePlate;
     @Column(name="MOBILE_PHONE")
     private String mobilePhone;
     @Column(name="FIXED_LINE")
     private String fixedLine;
     @Column(name="EMAIL")
     private String email;
-    @OneToOne(cascade = {CascadeType.PERSIST})
-    @JoinColumn(name="LICENSE_PLATE_ID")
-    private LicensePlate licensePlate;
     @Column(name="REGISTRATION_DATE")
     private LocalDate registrationDate;
 
     private Member() {}
 
-    private Member(MemberBuilder memberBuilder) {
-        this.name = memberBuilder.getName();
-        this.address = memberBuilder.getAddress();
-        this.mobilePhone = memberBuilder.getMobilePhone();
-        this.fixedLine = memberBuilder.getFixedLine();
-        this.email = memberBuilder.getEmail();
-        this.licensePlate = memberBuilder.getLicensePlate();
+    private Member(String name, Address address, LicensePlate licensePlate, String mobilePhone, String fixedLine, String email) {
+        this.name = name;
+        this.address = address;
+        this.licensePlate = licensePlate;
+        this.mobilePhone = mobilePhone;
+        this.fixedLine = fixedLine;
+        this.email = email;
         this.registrationDate = LocalDate.now();
     }
 
@@ -84,10 +84,6 @@ public class Member {
             return new MemberBuilder();
         }
 
-        public Member build() {
-            return new Member(this);
-        }
-
         public MemberBuilder withName(String name) {
             this.name = name;
             return this;
@@ -97,7 +93,6 @@ public class Member {
             this.address = address;
             return this;
         }
-
 
         public MemberBuilder withLicensePlate(LicensePlate licensePlate) {
             this.licensePlate = licensePlate;
@@ -118,28 +113,9 @@ public class Member {
             return this;
         }
 
-        public String getName() {
-            return name;
+        public Member build() {
+            return new Member(name,address,licensePlate,mobilePhone,fixedLine,email);
         }
 
-        public Address getAddress() {
-            return address;
-        }
-
-        public LicensePlate getLicensePlate() {
-            return licensePlate;
-        }
-
-        public String getMobilePhone() {
-            return mobilePhone;
-        }
-
-        public String getFixedLine() {
-            return fixedLine;
-        }
-
-        public String getEmail() {
-            return email;
-        }
     }
 }

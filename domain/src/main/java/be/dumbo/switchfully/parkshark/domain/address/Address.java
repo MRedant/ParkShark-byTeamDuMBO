@@ -18,11 +18,11 @@ public class Address {
     private Address() {
     }
 
-    private Address(AddressBuilder addressBuilder) {
-        this.streetName = addressBuilder.getStreetName();
-        this.streetNumber = addressBuilder.getStreetNumber();
-        this.postalCode = addressBuilder.getPostalCode();
-        this.label = addressBuilder.getLabel();
+    private Address(String streetName, String streetNumber, String postalCode, String label) {
+        this.streetName = streetName;
+        this.streetNumber = streetNumber;
+        this.postalCode = postalCode;
+        this.label = label;
     }
 
     public String getStreetName() {
@@ -54,10 +54,6 @@ public class Address {
             return new AddressBuilder();
         }
 
-        public Address build() {
-            return new Address(this);
-        }
-
         public AddressBuilder withStreetName(String streetName) {
             this.streetName = streetName;
             return this;
@@ -78,20 +74,8 @@ public class Address {
             return this;
         }
 
-        public String getStreetName() {
-            return streetName;
-        }
-
-        public String getStreetNumber() {
-            return streetNumber;
-        }
-
-        public String getPostalCode() {
-            return postalCode;
-        }
-
-        public String getLabel() {
-            return label;
+          public Address build() {
+            return new Address(streetName,streetNumber,postalCode,label);
         }
     }
 }
