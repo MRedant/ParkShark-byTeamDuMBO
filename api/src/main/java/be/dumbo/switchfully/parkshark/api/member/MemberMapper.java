@@ -4,7 +4,7 @@ package be.dumbo.switchfully.parkshark.api.member;
 import be.dumbo.switchfully.parkshark.api.member.address.AddressMapper;
 import be.dumbo.switchfully.parkshark.api.member.licenseplate.LicensePlateMapper;
 import be.dumbo.switchfully.parkshark.domain.member.Member;
-import be.dumbo.switchfully.parkshark.infrastructure.mapper.Mapper;
+import be.dumbo.switchfully.parkshark.infrastructure.dto.Mapper;
 
 import javax.inject.Inject;
 import javax.inject.Named;

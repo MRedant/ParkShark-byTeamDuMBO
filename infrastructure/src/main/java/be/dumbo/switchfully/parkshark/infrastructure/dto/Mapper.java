@@ -1,6 +1,4 @@
-package be.dumbo.switchfully.parkshark.infrastructure.mapper;
-
-//copied from switchfully order solution
+package be.dumbo.switchfully.parkshark.infrastructure.dto;
 
 public abstract class Mapper<DTO, DOMAIN> {
 
