@@ -1,4 +1,4 @@
-package be.dumbo.switchfully.parkshark.infrastructure;
+package be.dumbo.switchfully.parkshark.infrastructure.testApplication;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

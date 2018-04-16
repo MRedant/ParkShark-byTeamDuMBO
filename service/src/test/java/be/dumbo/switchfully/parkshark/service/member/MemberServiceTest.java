@@ -3,7 +3,7 @@ package be.dumbo.switchfully.parkshark.service.member;
 import be.dumbo.switchfully.parkshark.domain.member.address.Address;
 import be.dumbo.switchfully.parkshark.domain.member.licenseplate.LicensePlate;
 import be.dumbo.switchfully.parkshark.domain.member.Member;
-import be.dumbo.switchfully.parkshark.infrastructure.TestApplication;
+import be.dumbo.switchfully.parkshark.infrastructure.testApplication.TestApplication;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

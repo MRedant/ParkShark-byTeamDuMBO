@@ -1,5 +1,4 @@
 package be.dumbo.switchfully.parkshark.api.member;
-// copied and adapted code from order solution switchfully
 import be.dumbo.switchfully.parkshark.service.member.MemberService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

@@ -24,6 +24,24 @@
         <module>infrastructure</module>
     </modules>
 
+    <!--this test-jar needs to be generated for beeing able to place the TestApplication (which all the tests use)
+    in the test-folder of the infrastructure-module. On top every module needs an extra dependency on the test-jar from infrastructure(and also in the main pom)-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>test-jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -67,7 +85,7 @@
                 <version>${spring.boot.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.switchfully.order</groupId>
+                <groupId>be.dumbo.switchfully</groupId>
                 <artifactId>infrastructure</artifactId>
                 <type>test-jar</type>
                 <version>${project.version}</version>

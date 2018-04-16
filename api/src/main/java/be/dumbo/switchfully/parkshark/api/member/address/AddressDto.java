@@ -1,7 +1,5 @@
 package be.dumbo.switchfully.parkshark.api.member.address;
 
-//copied and adpated code from order solution switchfully
-
 public class AddressDto {
 
     private String streetName;

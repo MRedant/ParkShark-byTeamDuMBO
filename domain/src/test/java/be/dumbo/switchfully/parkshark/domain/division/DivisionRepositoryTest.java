@@ -1,6 +1,6 @@
 package be.dumbo.switchfully.parkshark.domain.division;
 
-import be.dumbo.switchfully.parkshark.infrastructure.TestApplication;
+import be.dumbo.switchfully.parkshark.infrastructure.testApplication.TestApplication;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;

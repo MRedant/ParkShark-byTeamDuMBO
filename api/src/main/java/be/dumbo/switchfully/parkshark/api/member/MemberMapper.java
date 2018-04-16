@@ -1,12 +1,10 @@
 
 package be.dumbo.switchfully.parkshark.api.member;
 
-//copied and adapated code from order solution switchfully
-
 import be.dumbo.switchfully.parkshark.api.member.address.AddressMapper;
 import be.dumbo.switchfully.parkshark.api.member.licenseplate.LicensePlateMapper;
 import be.dumbo.switchfully.parkshark.domain.member.Member;
-import be.dumbo.switchfully.parkshark.infrastructure.Mapper;
+import be.dumbo.switchfully.parkshark.infrastructure.mapper.Mapper;
 
 import javax.inject.Inject;
 import javax.inject.Named;

@@ -1,7 +1,5 @@
 package be.dumbo.switchfully.parkshark.api.member.licenseplate;
 
-//copied and adpated code from order solution switchfully
-
 public class LicensePlateDto {
 
     private int id;

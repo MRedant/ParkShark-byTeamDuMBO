@@ -1,7 +1,5 @@
 package be.dumbo.switchfully.parkshark.api.member;
 
-//copied and adapted code from order solution switchfully
-
 import be.dumbo.switchfully.parkshark.api.member.address.AddressDto;
 import be.dumbo.switchfully.parkshark.api.member.licenseplate.LicensePlateDto;
 
