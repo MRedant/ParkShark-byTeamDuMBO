@@ -1,4 +1,4 @@
-package be.dumbo.switchfully.parkshark.api.licenseplate;
+package be.dumbo.switchfully.parkshark.api.member.licenseplate;
 
 //copied and adpated code from order solution switchfully
 

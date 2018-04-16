@@ -1,9 +1,9 @@
-package be.dumbo.switchfully.parkshark.service.licenseplate;
+package be.dumbo.switchfully.parkshark.service.member.licenseplate;
 
 //copied from order solution switchfully
 
-import be.dumbo.switchfully.parkshark.domain.licenseplate.LicensePlate;
-import be.dumbo.switchfully.parkshark.domain.licenseplate.LicensePlateRepository;
+import be.dumbo.switchfully.parkshark.domain.member.licenseplate.LicensePlate;
+import be.dumbo.switchfully.parkshark.domain.member.licenseplate.LicensePlateRepository;
 
 import javax.inject.Inject;
 import javax.inject.Named;

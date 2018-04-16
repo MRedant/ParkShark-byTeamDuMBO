@@ -1,4 +1,4 @@
-package be.dumbo.switchfully.parkshark.api.address;
+package be.dumbo.switchfully.parkshark.api.member.address;
 
 //copied and adpated code from order solution switchfully
 

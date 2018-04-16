@@ -1,4 +1,4 @@
-package be.dumbo.switchfully.parkshark.domain.address;
+package be.dumbo.switchfully.parkshark.domain.member.address;
 
 import org.springframework.stereotype.Repository;
 

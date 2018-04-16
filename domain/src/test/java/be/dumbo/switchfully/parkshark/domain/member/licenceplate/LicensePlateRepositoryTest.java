@@ -1,7 +1,7 @@
-package be.dumbo.switchfully.parkshark.domain.licenceplate;
+package be.dumbo.switchfully.parkshark.domain.member.licenceplate;
 
-import be.dumbo.switchfully.parkshark.domain.licenseplate.LicensePlate;
-import be.dumbo.switchfully.parkshark.domain.licenseplate.LicensePlateRepository;
+import be.dumbo.switchfully.parkshark.domain.member.licenseplate.LicensePlate;
+import be.dumbo.switchfully.parkshark.domain.member.licenseplate.LicensePlateRepository;
 import be.dumbo.switchfully.parkshark.infrastructure.TestApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;

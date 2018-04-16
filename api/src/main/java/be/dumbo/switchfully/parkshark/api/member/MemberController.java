@@ -10,7 +10,7 @@ import javax.inject.Inject;
 
 @RestController
 @RequestMapping(path = "/" + MemberController.RESOURCE_NAME)
-public class MemberController {
+public class MemberController implements MemberEndPoint{
 
     public static final String RESOURCE_NAME = "member";
 

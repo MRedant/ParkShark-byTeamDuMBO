@@ -1,4 +1,4 @@
-package be.dumbo.switchfully.parkshark.domain.licenseplate;
+package be.dumbo.switchfully.parkshark.domain.member.licenseplate;
 
 import org.springframework.stereotype.Repository;
 

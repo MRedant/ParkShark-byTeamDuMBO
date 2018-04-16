@@ -1,14 +1,14 @@
-package be.dumbo.switchfully.parkshark.api.address;
+package be.dumbo.switchfully.parkshark.api.member.address;
 
 //copied and adpated code from order solution switchfully
 
-import be.dumbo.switchfully.parkshark.domain.address.Address;
+import be.dumbo.switchfully.parkshark.domain.member.address.Address;
 import be.dumbo.switchfully.parkshark.infrastructure.Mapper;
 
 import javax.inject.Named;
 
-import static be.dumbo.switchfully.parkshark.api.address.AddressDto.addressDto;
-import static be.dumbo.switchfully.parkshark.domain.address.Address.AddressBuilder.address;
+import static be.dumbo.switchfully.parkshark.api.member.address.AddressDto.addressDto;
+import static be.dumbo.switchfully.parkshark.domain.member.address.Address.AddressBuilder.address;
 
 @Named
 public class AddressMapper extends Mapper<AddressDto, Address>{

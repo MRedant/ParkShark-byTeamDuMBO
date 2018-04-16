@@ -1,9 +1,9 @@
 
 package be.dumbo.switchfully.parkshark.domain.member;
 
-import be.dumbo.switchfully.parkshark.domain.address.Address;
-import be.dumbo.switchfully.parkshark.domain.licenseplate.LicensePlate;
-import be.dumbo.switchfully.parkshark.domain.licenseplate.LicensePlateRepository;
+import be.dumbo.switchfully.parkshark.domain.member.address.Address;
+import be.dumbo.switchfully.parkshark.domain.member.licenseplate.LicensePlate;
+import be.dumbo.switchfully.parkshark.domain.member.licenseplate.LicensePlateRepository;
 import be.dumbo.switchfully.parkshark.infrastructure.TestApplication;
 import org.assertj.core.api.Assertions;
 import org.junit.Before;
