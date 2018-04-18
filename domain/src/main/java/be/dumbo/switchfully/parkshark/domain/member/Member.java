@@ -1,27 +1,31 @@
 package be.dumbo.switchfully.parkshark.domain.member;
 
+import be.dumbo.switchfully.parkshark.domain.BaseEntity;
 import be.dumbo.switchfully.parkshark.domain.member.address.Address;
 import be.dumbo.switchfully.parkshark.domain.member.licenseplate.LicensePlate;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
+import java.util.UUID;
 
 @Entity
 @Table(name="MEMBERS")
-public class Member {
+public class Member extends BaseEntity{
 
     @Id
-    @Column(name="ID")
-    @SequenceGenerator(name="members_seq", sequenceName = "MEMBERS_SEQ", initialValue = 1, allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "members_seq")
-    private int id;
+    @Column(name="ID", updatable = false, nullable = false)
+    @GenericGenerator(name = "UUID",strategy = "org.hibernate.id.UUIDGenerator")
+    @GeneratedValue(generator = "UUID")
+    private UUID id;
     @Column(name="NAME")
     private String name;
     @Embedded
     private Address address;
-    @OneToOne(cascade = {CascadeType.PERSIST})
+    @OneToMany(cascade = {CascadeType.PERSIST})
     @JoinColumn(name="LICENSE_PLATE_ID")
-    private LicensePlate licensePlate;
+    private List<LicensePlate> licensePlateList;
     @Column(name="MOBILE_PHONE")
     private String mobilePhone;
     @Column(name="FIXED_LINE")
@@ -33,17 +37,17 @@ public class Member {
 
     private Member() {}
 
-    private Member(String name, Address address, LicensePlate licensePlate, String mobilePhone, String fixedLine, String email) {
+    private Member(String name, Address address, List<LicensePlate> licensePlateList, String mobilePhone, String fixedLine, String email) {
         this.name = name;
         this.address = address;
-        this.licensePlate = licensePlate;
+        this.licensePlateList = licensePlateList;
         this.mobilePhone = mobilePhone;
         this.fixedLine = fixedLine;
         this.email = email;
         this.registrationDate = LocalDate.now();
     }
 
-    public int getId() {
+    public UUID getId() {
         return id;
     }
 
@@ -55,8 +59,8 @@ public class Member {
         return address;
     }
 
-    public LicensePlate getLicensePlate() {
-        return licensePlate;
+    public List<LicensePlate> getLicensePlate() {
+        return licensePlateList;
     }
 
     public LocalDate getRegistrationDate() {
@@ -73,7 +77,7 @@ public class Member {
 
         private String name;
         private Address address;
-        private LicensePlate licensePlate;
+        private List<LicensePlate> licensePlateList;
         private String mobilePhone;
         private String fixedLine;
         private String email;
@@ -94,8 +98,8 @@ public class Member {
             return this;
         }
 
-        public MemberBuilder withLicensePlate(LicensePlate licensePlate) {
-            this.licensePlate = licensePlate;
+        public MemberBuilder withLicensePlate(List<LicensePlate> licensePlateList) {
+            this.licensePlateList = licensePlateList;
             return this;
         }
 
@@ -114,7 +118,7 @@ public class Member {
         }
 
         public Member build() {
-            return new Member(name,address,licensePlate,mobilePhone,fixedLine,email);
+            return new Member(name,address,licensePlateList,mobilePhone,fixedLine,email);
         }
 
     }

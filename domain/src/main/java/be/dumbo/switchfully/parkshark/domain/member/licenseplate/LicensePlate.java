@@ -1,16 +1,19 @@
 package be.dumbo.switchfully.parkshark.domain.member.licenseplate;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
+import java.util.UUID;
 
 @Entity
 @Table(name="LICENSEPLATES")
 public class LicensePlate {
 
     @Id
-    @Column(name="ID")
-    @SequenceGenerator(name="licenseplates_seq", sequenceName = "LICENSEPLATES_SEQ", initialValue = 1, allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "licenseplates_seq")
-    private int id;
+    @Column(name="ID", updatable = false, nullable = false)
+    @GenericGenerator(name = "UUID",strategy = "org.hibernate.id.UUIDGenerator")
+    @GeneratedValue(generator = "UUID")
+    private int memberId;
     @Column(name="PLATE_NUMBER")
     private String plateNumber;
     @Column(name="ISSUING_COUNTRY")
@@ -18,13 +21,13 @@ public class LicensePlate {
 
     private LicensePlate() {}
 
-    private LicensePlate(LicensePlateBuilder licensePlateBuilder) {
-        this.plateNumber = licensePlateBuilder.getPlateNumber();
-        this.issuingCountry = licensePlateBuilder.getIssuingCountry();
+    public LicensePlate(String plateNumber, String issuingCountry) {
+        this.plateNumber = plateNumber;
+        this.issuingCountry = issuingCountry;
     }
 
-    public int getId() {
-        return id;
+    public UUID getId() {
+        return memberId;
     }
 
     public String getPlateNumber() {
@@ -46,10 +49,6 @@ public class LicensePlate {
             return new LicensePlateBuilder();
         }
 
-        public LicensePlate build() {
-            return new LicensePlate(this);
-        }
-
         public LicensePlateBuilder withPlateNumber(String plateNumber) {
             this.plateNumber = plateNumber;
             return this;
@@ -60,12 +59,8 @@ public class LicensePlate {
             return this;
         }
 
-        public String getPlateNumber() {
-            return plateNumber;
-        }
-
-        public String getIssuingCountry() {
-            return issuingCountry;
+        public LicensePlate build() {
+            return new LicensePlate(plateNumber, issuingCountry);
         }
     }
 }

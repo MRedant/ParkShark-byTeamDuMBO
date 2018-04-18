@@ -4,6 +4,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 public interface MemberEndPoint {
 
-    int registerMember(@RequestBody MemberDto memberDto);
+    String registerMember(@RequestBody MemberDto memberDto);
 
 }

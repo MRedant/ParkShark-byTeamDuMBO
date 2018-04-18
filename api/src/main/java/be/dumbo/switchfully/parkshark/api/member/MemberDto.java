@@ -3,9 +3,11 @@ package be.dumbo.switchfully.parkshark.api.member;
 import be.dumbo.switchfully.parkshark.api.member.address.AddressDto;
 import be.dumbo.switchfully.parkshark.api.member.licenseplate.LicensePlateDto;
 
+import java.util.UUID;
+
 public class MemberDto {
 
-    private int id;
+    private UUID id;
     private String name;
     private LicensePlateDto licensePlate;
     private String registrationDate;
@@ -32,7 +34,7 @@ public class MemberDto {
         return registrationDate;
     }
 
-    public int getId() {
+    public UUID getId() {
         return id;
     }
 
@@ -57,7 +59,7 @@ public class MemberDto {
         return this;
     }
 
-    public MemberDto withId(int id) {
+    public MemberDto withId(UUID id) {
         this.id = id;
         return this;
     }
